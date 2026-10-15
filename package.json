@@ -1,0 +1,47 @@
+{
+  "name": "hn-hiring-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.Crayz129/hn-hiring-mcp",
+  "description": "MCP server that turns Hacker News \"Who is hiring?\" threads into a searchable, typed job API",
+  "author": "Arseniy Solovyov (https://github.com/Crayz129)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crayz129/hn-hiring-mcp.git"
+  },
+  "homepage": "https://github.com/Crayz129/hn-hiring-mcp#readme",
+  "bugs": "https://github.com/Crayz129/hn-hiring-mcp/issues",
+  "type": "module",
+  "bin": {
+    "hn-hiring-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "record-fixtures": "node --experimental-strip-types scripts/record-fixtures.ts",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hacker-news",
+    "jobs",
+    "who-is-hiring"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
+  }
+}

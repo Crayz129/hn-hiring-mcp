@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Crayz129/hn-hiring-mcp",
+  "title": "HN Who is hiring",
+  "description": "Search, read and compare Hacker News \"Who is hiring?\" job posts as typed data. Read-only.",
+  "repository": {
+    "url": "https://github.com/Crayz129/hn-hiring-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "hn-hiring-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "HN_HIRING_MCP_CACHE_DIR",
+          "description": "Directory for the response cache (default ~/.cache/hn-hiring-mcp; \"off\" disables the disk cache)",
+          "isRequired": false
+        }
+      ]
+    }
+  ]
+}
